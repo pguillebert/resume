@@ -1,0 +1,254 @@
+%% start of file `template_en.tex'.
+%% Copyright 2006-1008 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,a4paper]{moderncv}
+
+% moderncv themes
+%\moderncvtheme[blue]{casual}                 % optional argument are
+%'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[orange]{casual}                  % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[letterpaper, left=.7in, right=.7in, top=.7in, bottom=1.5in]{geometry}
+
+\setlength{\hintscolumnwidth}{64pt} %if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{12cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+
+% load private information from a separate file, not commited to github.
+% this file should contain lines like:
+% \newcommand{\AddressLineOne}{my address}
+\input{private.tex}
+
+% personal data
+\firstname{Philippe}
+\familyname{Guillebert}
+\title{Senior Backend Software Engineer}             % optional, remove the line if not wanted
+\address{\AddressLineOne}{\AddressLineTwo}           % optional, remove the line if not wanted
+\phone{\PhoneNumber}                                 % optional, remove the line if not wanted
+%\mobile{phone (optional)}                           % optional, remove the line if not wanted
+%\fax{fax (optional)}                                % optional, remove the line if not wanted
+\email{\EmailAddress}                                % optional, remove the line if not wanted
+\extrainfo{\httplink{github.com/pguillebert}}        % optional, remove the line if not wanted
+
+%\photo[64pt]{Philippe_guillebert_face.jpg}
+
+\quote{Experienced problem-solver looking for a new challenge}
+
+\nopagenumbers{}
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Experience}
+
+\cventry{jan 2016}{present}
+        {\textcolor{subsectioncolor}{Software Engineer at Bench Accounting}}
+        {}{}{[\httplink{www.bench.co}]}
+{Bench provides online bookkeeping services to organize the financials of small businesses.
+  With an hybrid approach of automated software and human accountants, Bench simplifies
+  the life of entrepreneurs by taking bookkeeping off their minds.}
+\cvline {Platform}
+{Deployed microservices on AWS Elastic Beanstalk. Contributed to the build pipeline
+  automation using circleCI \& Jenkins. Member of on call rotation.}
+\cvline {Developer}
+{Built the Billing system for Bench leveraging Stripe. Contributed to Internal tools for
+  bookkeepers, and to the to the core Java/Scala financial app.}
+\cvline {Data}
+{Researched and Maintained a deep neural network classification for transactions.
+  Produced daily operational metrics for the business using AWS Redshift \& Glue.
+  Designed a rewrite of the Transaction acquisition system.}
+
+\cventry{nov 2013}{dec 2015}
+        {\textcolor{subsectioncolor}{Lead Devops Engineer at Linkfluence}}
+        {}{}{[\httplink{www.linkfluence.com}]}
+{Linkfluence is a leading social media intelligence company in Europe. Radarly
+  software tracks and analyzes more than 150 million publications everyday, in 78 languages.
+  It provides insights to marketing \& communication about their impact on the social web.}
+\cvline {Clojure dev}
+{Wrote Storm spouts \& bolts for processing, and {\em ad-hoc} data management software
+  at a large scale. Wrote a Riemann agent (Cauchy). Interact with, and challenge other
+  developers during software design decisions. Contribute to overall data quality.}
+\cvline {Devops}
+{In charge of production. Monitored performance and quality.
+  Automated deployment with Ansible. Migrated production infrastructure from dedicated
+  servers to AWS. Automated autoscaled processing power spent on Amazon EC2.}
+\cvline {Team lead}
+{Managed a Platform team of 3. Interacted with upper management and finance.}
+
+\cventry{sep 2011}{nov 2013}
+        {\textcolor{subsectioncolor}{Engineer at Youmag}}
+        {}{}{}
+{Youmag was a smart press aggregator app that used
+  natural language processing techniques to generate
+  a customizable magazine from thousands of online sources.}
+\cvline {Clojure dev}
+{Dev and support of ``big data'' components, web crawling pipeline,
+ and Natural Language Processing pipeline.}
+\cvline {Devops}
+{Install and configure hardware, OS, network and applications.
+ Implement fault management and performance monitoring.
+ Automate deployment and configuration management.}
+\cvline {Reporting}
+{Develop reporting tools to gather logs and data. Analyse and produce
+ quality metrics and end-user behavior statistics.}
+
+\cventry{nov 2010}{sep 2011}
+        {\textcolor{subsectioncolor}{Consultant at Devoteam Uperto}}
+        {IDEOS Department}{}{}
+{Uperto was the open source brand for Devoteam Group, providing technical
+  expertise and customizations for open source solutions.}
+\cvline {Consultant}
+{Designed solutions during presales. Promoted Open Source technologies.}
+
+\cventry{apr 2006}{nov 2010}
+        {\textcolor{subsectioncolor}{Software architect at Bull Télécom}}
+        {OSS Department}{}{}
+{Bull Telco was a solution integrator for large Telecom operators.
+  The Operation Support Systems team provides
+  network provisioning, network fault \& issue management, etc.}
+\cvline{Integration}
+{Built \& ran large projects for major telcos using proprietary and/or free software.
+  Designed, evangelized and marketed a new open source product line.}
+
+%% \subsection{Projects for Bull Télécom}
+
+%% \cventry{2010}{Bouygues Télécom}{NBBS 5 Platform}{}{(Technical Expert)}
+%% {Design, planning, installation and testing of a platform managing all Bytel "boxes" (CPE).}
+%% \cvline{ } {Technologies : \small Solaris, Sun Cluster, Apache, Java, Resin, NBBS, f5 load balancers, fortinet firewalls}
+
+%% \cventry{2009}{Covage}{Network Operations Center}{}{(Solution Architect)}
+%% {Delivery of a complete opensource NOC application suite for this IP
+%%   carrier. Includes fault \& performance management,
+%%   trouble-ticketing, knowledge managment and network configuration
+%%   management. The solution uses off-the-shelf open-source software and
+%%   custom developments. All components are running on a Highly
+%%   Available Linux cluster. Currently manages several thousands nodes
+%%   across France.}
+%% \cvline{ } {Technologies : \small Red Hat Linux, Pacemaker (Heartbeat), DRBD, OpenNMS, Mantis, PHP, Perl, PostgreSQL}
+
+%% \cventry{2008}{Médias et Régies Europe}{Numériflash}{}{(Solution Architect)}
+%% {Completely open-source management solution (performance, fault,
+%%   upgrade management) for several hundred giant advertisement
+%%   television screens located in the Paris subway.}
+%% \cvline{ } {Technologies : \small Red Hat Linux, OpenNMS, OCS Inventory, Perl, PHP, MySQL}
+
+%% \cventry{2008}{Sonatel (Orange Sénégal)}{Integration Layer}{}{(Lead Developer)}
+%% {Development of an abstraction layer for Billing (HighDeal) and Provisioning (Kabira KPSA) systems in order to provide a single front-end API for the customer care system. Uses J2EE components on a Jonas application server.}
+%% \cvline{ } {Technologies : \small Red Hat Linux, Java, J2EE, Jonas}
+
+%% \cventry{2007}{SFR}{Auto Configuration Server}{}{(Engineer)}
+%% {Delivery and operation of a Device management platform for SFRBoxes (DSL Customer Premises Equipments). Uses TR-069 protocol and Motorola NBBS software.}
+%% \cvline{ } {Technologies : \small Red Hat Linux, Apache, NBBS, PostgreSQL}
+
+%% \cventry{2006}{La Poste (French postal services)}{Système d'Interprétation d'Enveloppes}{}{(6 months as Intern, then Engineer)}
+%% {An ambitious IT rework of the mail routing systems needed a technical monitoring of the computing systems delivered by Bull all over the country (80 people involved). The subproject (3 Bull telco people) used Tivoli software for fault, performance, and software distribution. }
+%% \cvline{ } {Technologies : \small AIX, IBM Tivoli suite}
+
+
+%\cventry{2005}{\textcolor{subsectioncolor}{Systems and Network Intern at Groupe Solucom}}
+%{IT Department}{}{[\httplink{www.solucom.fr}]}
+%{Solucom is a consulting company. I spent a two months internship with internal IT. Various sysadmin tasks within a Microsoft-based environment (support, repairs, data migration project). }
+%\cvline{ } {Technologies : \small Microsoft Windows server, Active Directory, Checkpoint, Squid }
+
+
+\section{Education}
+
+\cventry{2003}{2006}{\textcolor{subsectioncolor}{Administrator at Supélec Rézo}}
+        {Supélec Campus}{}{[\httplink{www.rez-gif.supelec.fr}]}
+{Supélec Rezo is the non-profit group of students managing the network
+  for the Supélec campus as a local ISP. Connects 700+ students to internet, and
+  provides associated services.}
+\cvline{Member}{Linux, Apache, Squid, Bind, Networking, PHP, MySQL. Hardware procurement.}
+
+\cventry{2003}{2006}{\textcolor{subsectioncolor}{Engineering degree}}
+        {Supélec}{Gif sur Yvette}{[\httplink{www.supelec.fr}]}
+{Supélec (formally École Supérieure d'Électricité) is a usually
+  ranked ``top 5'' of french engineering school.}
+\cvline{Major}{\textit{ ``Informatique, Systèmes et Réseaux''}
+  (Computer science, systems and networks)}
+
+%\cventry{2001--2003}{CPGE Physique-Technologie}{Lycée Jean
+%  Mermoz}{Montpellier}{}
+%{Engineering Prep school.}
+
+%\cventry{Juin 2001}{Bac S mention Bien}{}{Montpellier}{}{}
+
+\section{Spoken languages}
+
+\cvline{French}{Native speaker}
+\cvline{English}{Fluent}
+\cvline{Spanish}{Basic level}
+
+\section{Technologies}
+
+\setlength{\hintscolumnwidth}{0.25\textwidth}
+\recomputelengths
+
+\cvline{Programming languages}{Clojure, Scala, Java, Perl, Shell, Python}
+\cvline{Batch processing}{Spark, Pail, Avro, Cascading, Cascalog, AWS EMR \& Glue}
+\cvline{Real-time processing}{Storm {\small (by Nathan Marz)}, interest in Onyx}
+\cvline{Storage \& DBs}{PostgreSQL, MySQL, Elastic Search, Hadoop, Basho Riak, Redis, HBase}
+\cvline{Queuing}{Kafka, Kestrel, ActiveMQ}
+\cvline{Log Management}{Log4j, Logback, Splunk, Logstash, Kibana}
+\cvline{Amazon Web Services}{EC2, S3, RDS, Elasticache, route53, Elastic Beanstalk, AWS Glue, Redshift...}
+\cvline{Cloud infrastructure}{Ansible, Docker, Riemann, Synapse {\small (from Airbnb)}, Packer, Datadog}
+\cvline{Continuous Integration}{CircleCI, Jenkins, scalatest}
+
+%% \section{Telecom Skills}
+
+%% % \begin{tabular*}{0.75\textwidth}{@{\extracolsep{\fill}} |r|l| }
+%% \begin{tabular}{@{}p{12em}@{\hspace{1em}}p{26em}@{}}
+
+%%   \raggedleft  Fault Management 		&	OpenNMS, Nagios 			\\
+%%   \raggedleft  Performance Management 		&	OpenNMS, Cacti, PNP4Nagios              \\
+%%   \raggedleft  Trouble ticketing		&	Mantis 					\\
+%%   \raggedleft  Configuration \& Inventory	&	RANCID, OCS Inventory NG 		\\
+%%   \raggedleft  Telco Modelization 		& 	ITIL, eTOM, Tele Management Forum norms \\
+%%   \raggedleft  Telecom-specific protocols 	& 	SNMP, TR-069 				\\
+%%   \raggedleft  Device Management 		& 	DSL Modem (CPE), residential gateways,
+%%                    Auto-configuration servers, Motorola NBBS 					\\
+%%   \raggedleft  Systems integration 		&	Troubleshooting, optimization		\\
+%%   \raggedleft  Presales Architecture 		&	Software and network architecture,
+%%                    hardware sizing, cost estimates, planning, project management 		\\
+
+%% \end{tabular}
+
+%\section{System administration Skills}
+
+%\begin{tabular}{@{}p{12em}@{\hspace{2em}}p{26em}@{}}
+
+%  \raggedleft  TCP/IP Networking	&	 IPv4, IPv6, routing, Firewalls (Linux IPtables) \\
+%  \raggedleft Load balancers       & (HAproxy, ldirectord) \\
+%  \raggedleft  Security &  Crypto, IPsec, OpenVPN, VLANs, AWS Security groups \\
+%  \raggedleft  IP Services 		&	 DNS, DHCP, HTTP (Apache, nginx) \\
+% LDAP (openLDAP), Proxy (Squid) \\
+%  \raggedleft  Systems monitoring 	&	 Nagios, Shinken, PNP4Nagios, OpenNMS \\
+%  \raggedleft  High Availability 	&	 Pacemaker HA cluster, Linux DRBD, AWS ASG  \\
+%  \raggedleft  Version Control		&	 Git and gitolite, Subversion \\
+%  \raggedleft  Java EE 			&	 Jonas, EJB, SOAP (web services), JMS 		\\
+%  \raggedleft  Linux Systems 		&	 Red Hat, Ubuntu, Debian, Archlinux	\\
+%  \raggedleft  UNIX Systems 		&	 Solaris (install, admin, Sun Cluster), AIX (admin) \\
+%  \raggedleft  Free software evangelism &	 Knowledge of FLOSS environment and pros/cons	\\
+
+%\end{tabular}
+
+%\section{Interests}
+
+% \cvline{Music}{\small Plays the saxophone in a band}{}
+%\cvline{Karate}{\small Practices Sh\=orin Ry\=u Karate}{}
+
+\end{document}
