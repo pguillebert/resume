@@ -342,7 +342,7 @@
       \raggedleft \hintfont{\textbf{#2}}
     \end{minipage}
   }{%
-    {\bfseries#3}%
+    {\bfseries\textcolor{subsectioncolor}{#3}}%
     \ifx#4\else{, {\slshape#4}}\fi%
     \ifx#5\else{, #5}\fi%
     \ifx#6\else{ #6}\fi%
